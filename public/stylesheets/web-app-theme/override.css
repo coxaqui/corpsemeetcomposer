@@ -1,0 +1,59 @@
+/* Override here any style defined by web-app-theme */
+
+#user-navigation li.logout {
+  background: #cc0000;
+  padding: 1px 4px;
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 3px;
+}
+#user-navigation li.login {
+  background: #cc0000;
+  padding: 1px 4px;
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 3px;
+}
+
+#user-navigation li.admin {
+  background: green;
+  padding: 1px 4px;
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 3px;
+}
+
+/*BUTTON */
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+a.button {
+    background: transparent url('bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 14px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 30px;
+	
+}
+
+a.button span {
+    background: transparent url('bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+}

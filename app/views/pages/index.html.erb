@@ -1,0 +1,44 @@
+<DIV ALIGN=RIGHT style="background-color:orange">
+	<a>  <%= link_to '[New Page]', new_page_path %></a>
+	<a> | </a>
+	<a> <%= link_to "[Edit Admin Account]", edit_user_registration_path %></a>
+</DIV>
+
+<DIV ALIGN=CENTER>
+<h1>Edit your pages here as you wish.</h1>
+</DIV>
+<li style="color=red">Do NOT change the page's NAME for that is mapped to the like above with menus</li>
+<li>Change the page's "body" as you wish </li>
+<li>Add content as you wish. You can then add links from the existing pages to the pages you created. </li>
+<li>Remember the page's body will read some HTML'</li>
+<li>Let me know how it goes. Take care</li>
+
+<br/>
+<br/>
+<br/>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%= page.name %></td>
+    <td><%= page.title %></td>
+    <td><%= page.body %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
